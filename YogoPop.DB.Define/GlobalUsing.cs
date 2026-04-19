@@ -1,0 +1,16 @@
+global using Autofac;
+global using Mapster;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.ComponentModel;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System.Data;
+global using System.Linq.Expressions;
+global using System.Reflection;
+global using System.Transactions;
+global using YogoPop.Core.CusEnum;
+global using YogoPop.Core.DTO;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Interface;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.Core.Tool;

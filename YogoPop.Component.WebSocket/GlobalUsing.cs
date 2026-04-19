@@ -1,0 +1,13 @@
+global using Autofac;
+global using FreeRedis;
+global using Mapster;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using System.Collections.Concurrent;
+global using System.Data;
+global using System.Globalization;
+global using System.Net.WebSockets;
+global using System.Text;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.Core.Tool;

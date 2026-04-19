@@ -1,0 +1,15 @@
+global using Microsoft.Extensions.DependencyInjection;
+global using RabbitMQ.Client;
+global using RabbitMQ.Client.Events;
+global using System.ComponentModel;
+global using System.Text;
+global using YogoPop.Component.MQ;
+global using YogoPop.Component.MQ.RabbitMQ;
+global using YogoPop.Core.Attr.Label;
+global using YogoPop.Core.CusEnum;
+global using YogoPop.Core.DTO;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Interface;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.DB.Define;

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\YogoPop.Component.Attachment\YogoPop.Component.Attachment.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.Cache\YogoPop.Component.Cache.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.Dispatcher\YogoPop.Component.Dispatcher.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.Logger\YogoPop.Component.Logger.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.MQ\YogoPop.Component.MQ.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.MultiLang\YogoPop.Component.MultiLang.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.Permission\YogoPop.Component.Permission.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.Security\YogoPop.Component.Security.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Component.Swagger\YogoPop.Component.Swagger.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Core\YogoPop.Core.csproj" />
+        <ProjectReference Include="..\..\YogoPop.DB.Define\YogoPop.DB.Define.csproj" />
+        <ProjectReference Include="..\..\YogoPop.Support\YogoPop.Support.csproj" />
+    </ItemGroup>
+
+</Project>

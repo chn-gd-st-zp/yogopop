@@ -1,0 +1,13 @@
+global using Autofac;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Data;
+global using Twilio;
+global using Twilio.Rest.Verify.V2.Service;
+global using YogoPop.Core.CusEnum;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.Core.Result;
+global using YogoPop.Core.Tool;
+global using YogoPop.DB.Define;

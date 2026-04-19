@@ -1,0 +1,14 @@
+global using Flurl.Http;
+global using Microsoft.Extensions.DependencyInjection;
+global using SimpleCaptcha.Generator;
+global using SixLabors.Fonts;
+global using SixLabors.ImageSharp;
+global using SixLabors.ImageSharp.Drawing.Processing;
+global using SixLabors.ImageSharp.Formats.Jpeg;
+global using SixLabors.ImageSharp.PixelFormats;
+global using SixLabors.ImageSharp.Processing;
+global using System.ComponentModel;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.Tool;

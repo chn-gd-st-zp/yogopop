@@ -1,0 +1,12 @@
+global using Autofac;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.Extensions.DependencyInjection;
+global using Newtonsoft.Json;
+global using YogoPop.Component.Cache;
+global using YogoPop.Core.CusEnum;
+global using YogoPop.Core.EncryptionNDecrypt;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.Core.Tool;
+global using YogoPop.Core.VException;

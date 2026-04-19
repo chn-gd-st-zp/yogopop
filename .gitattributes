@@ -1,0 +1,9 @@
+# 统一所有文本文件为 LF 行尾
+* text=auto eol=lf
+
+# 强制 UTF-8 编码（仅对 Git 内部标识；不改变内容）
+* working-tree-encoding=UTF-8
+
+# 强制重新归一化文件
+# git add --renormalize .
+# git commit -m "Normalize all line endings to LF"

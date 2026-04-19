@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <NoWarn>$(NoWarn);1591;NU1605;NU1801;NU1901</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <Target Name="CopyDllAndXml" AfterTargets="Build">
+        <ItemGroup>
+            <OutputFiles Include="$(TargetDir)$(AssemblyName).dll" />
+            <OutputFiles Include="$(TargetDir)$(AssemblyName).xml" />
+        </ItemGroup>
+        <Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(ProjectDir)..\dlls\" SkipUnchangedFiles="true" />
+    </Target>
+
+    <ItemGroup>
+        <ProjectReference Include="..\YogoPop.Core\YogoPop.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FreeRedis" Version="1.1.5" />
+        <PackageReference Include="RedLock.net" Version="2.3.2" />
+        <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
+    </ItemGroup>
+
+</Project>

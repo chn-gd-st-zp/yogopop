@@ -1,0 +1,17 @@
+**/obj
+**/bin
+**/publish
+**/packages
+**/node_modules
+**/log
+**/logs
+**/dlls
+**/.vs
+*.suo
+*.pdb
+*.user
+*.pubxml
+*.publish.xml
+*.idea
+launchSettings.json
+dotnet-tools.json

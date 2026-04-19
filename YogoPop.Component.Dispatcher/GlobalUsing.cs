@@ -1,0 +1,16 @@
+global using Autofac;
+global using Hangfire;
+global using Hangfire.MemoryStorage;
+global using Mapster;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Quartz;
+global using Quartz.Impl;
+global using Quartz.Spi;
+global using System.ComponentModel;
+global using System.Data;
+global using System.Reflection;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.Tool;

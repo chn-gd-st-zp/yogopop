@@ -1,0 +1,13 @@
+global using Autofac;
+global using Mapster;
+global using OfficeOpenXml;
+global using SixLabors.ImageSharp;
+global using SixLabors.ImageSharp.Processing;
+global using System.ComponentModel;
+global using System.Data;
+global using System.Reflection;
+global using YogoPop.Core.CusEnum;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.Tool;

@@ -1,0 +1,12 @@
+global using Autofac;
+global using FreeRedis;
+global using Microsoft.Extensions.DependencyInjection;
+global using RedLockNet;
+global using RedLockNet.SERedis;
+global using RedLockNet.SERedis.Configuration;
+global using StackExchange.Redis;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.Core.Tool;

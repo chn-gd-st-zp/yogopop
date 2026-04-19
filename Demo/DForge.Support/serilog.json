@@ -1,0 +1,61 @@
+{
+    "Serilog": {
+        "Using": [
+            "Serilog.Sinks.File",
+            "Serilog.Filters.Expressions"
+        ],
+        "MinimumLevel": {
+            "Default": "Verbose",
+            "Override": {
+                "System": "Information",
+                "Microsoft": "Information",
+                "Microsoft.Hosting.Lifetime": "Information"
+            }
+        },
+        "WriteTo": [
+            {
+                "Name": "File",
+                "Args": {
+                    "path": "./logs/common/dforge..log",
+                    "RestrictedToMinimumLevel": "Verbose",
+                    "rollingInterval": "Day",
+                    "rollonFileSizeLimit": true,
+                    "fileSizeLimitBytes": 10485760,
+                    "outputTemplate": "{NewLine}{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level}] [{SourceContext}] {Message}{NewLine}{Exception}"
+                }
+            }
+        ],
+        "Enrich": [ "FromLogContext", "WithTrheadId", "WithUtcTimestamp", "WithExceptionDetails" ],
+        "Filters": [
+            {
+                "Name": "ByExcluding",
+                "Args": {
+                    "expression": "StartWith(SourceContext,'Microsoft')"
+                }
+            }
+        ],
+        "Properties": {
+            "Application": "dforge"
+        }
+    },
+
+    "SeriLoggerSettings": {
+        "PathMode": "REF", //ABS
+        "PathAddr": "/logs/", //C:/logs/
+        "RollingInterval": "Day",
+        "RollOnFileSizeLimit": true,
+        "FileSizeLimitMB": 1024,
+        "Template": "{NewLine}{Timestamp:yyyy-MM-dd HH:mm:ss.fff}{cus_ext}{Message}{NewLine}{Exception}",
+
+        "ToEmail": {
+            "Enable": false,
+            "MinimumLevel": "Error",
+            "Triggers": [ "" ],
+            "MailServer": "",
+            "Port": 0,
+            "SenderEmail": "",
+            "CarbonCopyEmail": [ "" ],
+            "ReceiverEmails": [ "" ]
+        }
+    }
+}

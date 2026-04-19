@@ -1,0 +1,18 @@
+global using Autofac;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using NLog;
+global using NLog.Web;
+global using Serilog;
+global using Serilog.Configuration;
+global using Serilog.Core;
+global using Serilog.Events;
+global using YogoPop.Core.CusEnum;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.Interface;
+global using YogoPop.Core.JsonExtend;
+global using YogoPop.Core.Tool;
+global using Seri = Serilog;

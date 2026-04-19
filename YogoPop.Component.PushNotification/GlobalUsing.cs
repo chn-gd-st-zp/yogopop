@@ -1,0 +1,1 @@
+global using YogoPop.Core.Injection;

@@ -1,0 +1,11 @@
+global using Autofac;
+global using RabbitMQ.Client;
+global using RabbitMQ.Client.Events;
+global using System.Collections.Concurrent;
+global using System.ComponentModel;
+global using System.Text;
+global using YogoPop.Core.Extension;
+global using YogoPop.Core.Injection;
+global using YogoPop.Core.Injection.Settings;
+global using YogoPop.Core.Interface;
+global using YogoPop.Core.JsonExtend;
