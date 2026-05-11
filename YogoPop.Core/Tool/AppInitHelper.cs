@@ -215,8 +215,10 @@ public static class AppInitHelper
             .SetBasePath(RootPath)
             .AddJsonFile($"appsettings.json", true, true);
 
+        var midName = $"{envName.ToLower()}{(IsOnDev ? ".local" : "")}";
+
         if (Environment != EnvironmentEnum.None)
-            configBuilder.AddJsonFile($"appsettings.{envName.ToLower()}.json", true, true);
+            configBuilder.AddJsonFile($"appsettings.{midName}.json", true, true);
 
         if (configFiles != null)
         {
