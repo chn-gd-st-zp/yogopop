@@ -28,6 +28,27 @@ public static class AppInitHelper
         }
     }
 
+    public static bool IsOnDev
+    {
+        get
+        {
+            bool isOnDev = true;
+
+            try
+            {
+                var value = System.Environment.GetEnvironmentVariable("ASPNETCORE_ISONDEV");
+                if (!value.IsEmptyString())
+                    isOnDev = bool.Parse(value);
+            }
+            catch (Exception)
+            {
+                throw new Exception("无效的环境变量[IsOnDev]");
+            }
+
+            return isOnDev;
+        }
+    }
+
     public static bool IsTestMode
     {
         get
