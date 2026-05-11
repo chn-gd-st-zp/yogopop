@@ -32,7 +32,7 @@ public static class AppInitHelper
     {
         get
         {
-            bool isOnDev = true;
+            bool isOnDev = false;
 
             try
             {
