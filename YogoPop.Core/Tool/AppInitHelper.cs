@@ -211,19 +211,27 @@ public static class AppInitHelper
         var envName = Environment.ToString();
         Printor.PrintText("环境变量: " + envName);
 
-        configBuilder
-            .SetBasePath(RootPath)
-            .AddJsonFile($"appsettings.json", true, true);
+        var defaultJsonSources = configBuilder.Sources
+            .OfType<Microsoft.Extensions.Configuration.Json.JsonConfigurationSource>()
+            .ToList();
+        foreach (var src in defaultJsonSources)
+            configBuilder.Sources.Remove(src);
 
-        var midName = $"{envName.ToLower()}{(IsOnDev ? ".local" : "")}";
+        configBuilder.SetBasePath(RootPath);
+        configBuilder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
         if (Environment != EnvironmentEnum.None)
-            configBuilder.AddJsonFile($"appsettings.{midName}.json", true, true);
+        {
+            if (IsOnDev)
+                configBuilder.AddJsonFile($"appsettings.{envName.ToLower()}.local.json", optional: true, reloadOnChange: true);
+            else
+                configBuilder.AddJsonFile($"appsettings.{envName.ToLower()}.json", optional: true, reloadOnChange: true);
+        }
 
         if (configFiles != null)
         {
             foreach (var file in configFiles)
-                configBuilder.AddJsonFile(file, true, true);
+                configBuilder.AddJsonFile(file, optional: true, reloadOnChange: true);
         }
 
         return configBuilder;
